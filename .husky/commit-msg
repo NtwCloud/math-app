@@ -1,16 +1,9 @@
-#!/bin/sh
-
-# Run commitlint and capture its exit code
 npx --no-install commitlint --edit "$1"
-COMMITLINT_EXIT_CODE=$?
 
-# If commitlint failed, show custom message
-if [ $COMMITLINT_EXIT_CODE -ne 0 ]; then
-  echo ""
-  echo "\033[0;31m🚫 Mensagem de commit rejeitada!\033[0m"
-  echo "Sua mensagem deve começar com um dos tipos: adds:, feat:, fix:, hotfix:, chore:, docs:, test:, style:, refactor:, ci:, perf: ou build:"
-  echo "Exemplo: feat: adicionar tela de login"
-  echo "Use 'git commit --amend -m \"tipo: sua mensagem\"' para corrigir."
-  echo ""
+if [ $? -ne 0 ]; then
+  echo "\033[0;31m🚫 Commit message rejected!\033[0m"
+  echo "Your commit message must start with one of: adds:, feat:, fix:, hotfix:, chore:, docs:, test:, style:, refactor:, ci:, perf: or build:"
+  echo "Example: feat: add user registration page"
+  echo "Please amend your commit message and try again."
   exit 1
 fi
