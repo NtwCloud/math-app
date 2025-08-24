@@ -1,1 +1,9 @@
 npx --no-install commitlint --edit "$1"
+
+if [ $? -ne 0 ]; then
+  echo "\033[0;31m🚫 Commit message rejected!\033[0m"
+  echo "Your commit message must start with one of: adds:, feat:, fix:, hotfix:, chore:, docs:, test:, style:, refactor:, ci:, perf: or build:"
+  echo "Example: feat: add user registration page"
+  echo "Please amend your commit message and try again."
+  exit 1
+fi
