@@ -1,0 +1,11 @@
+{
+    "devDependencies": {
+        "@biomejs/biome": "2.2.2",
+        "husky": "^9.1.7"
+    },
+    "scripts": {
+        "check:fix": "biome check --write ./frontend ./landingpage",
+        "lint:fix": "biome lint --write ./frontend ./landingpage",
+        "format": "biome format --write ./frontend ./landingpage"
+    }
+}
