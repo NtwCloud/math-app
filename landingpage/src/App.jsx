@@ -4,9 +4,7 @@ function App() {
     return (
         <>
             <div>
-                <p className="text-3xl font-medium text-red-500">
-                    Hello World!
-                </p>
+                <p className="font-medium text-3xl text-red-500">Hello World!</p>
             </div>
         </>
     );
