@@ -1,13 +1,11 @@
 import "./App.css";
 
 function App() {
-  return (
-    <>
-      <div>
-        <p className="read-the-docs">Hello World!</p>
-      </div>
-    </>
-  );
+    return (
+        <div>
+            <p className="text-2xl font-bold text-red-500">Hello World!</p>
+        </div>
+    );
 }
 
 export default App;
