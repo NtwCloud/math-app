@@ -1,3 +1,2 @@
-npm run check:fix
-npm run lint:fix
-npm run format
+echo "🔧 Executando lint-staged nos diretórios frontend/ e landingpage/..."
+npx lint-staged

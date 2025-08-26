@@ -3,11 +3,22 @@
         "@biomejs/biome": "2.2.2",
         "@commitlint/cli": "^19.8.1",
         "@commitlint/config-conventional": "^19.8.1",
-        "husky": "^9.1.7"
+        "husky": "^9.1.7",
+        "lint-staged": "^16.1.5"
+    },
+    "lint-staged": {
+        "frontend/**/*.{js,jsx,ts,tsx,json,css,md}": [
+            "biome format --write",
+            "biome lint --write"
+        ],
+        "landingpage/**/*.{js,jsx,ts,tsx,json,css,md}": [
+            "biome format --write",
+            "biome lint --write"
+        ]
     },
     "scripts": {
         "check:fix": "biome check --write ./frontend ./landingpage",
         "lint:fix": "biome lint --write ./frontend ./landingpage",
-        "format": "biome format --write ./frontend ./landingpage"
+        "format:fix": "biome format --write ./frontend ./landingpage"
     }
 }
