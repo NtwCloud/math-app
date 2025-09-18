@@ -1,10 +1,10 @@
-package com.secure.math;
+package com.secure.schedule;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class MathApplicationTests {
+class ScheduleApplicationTests {
 
 	@Test
 	void contextLoads() {

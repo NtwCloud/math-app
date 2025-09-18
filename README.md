@@ -1,6 +1,6 @@
-# Math Learning App
+# Schedule Appointment App!
 
-Uma plataforma colaborativa para o aprendizado de matemática inspirada no Duolingo, focada em habilidades básicas de matemática. Criada por estudantes, para estudantes!
+Esse é um app focado em agendamentos de atendimentos profissionais de diversas especialidades, com o objetivo de facilitar a vida dos pacientes e profissionai.
 
 ---
 
@@ -49,7 +49,7 @@ Uma plataforma colaborativa para o aprendizado de matemática inspirada no Duoli
 ## 🗂️ Estrutura do Monorepo
 
 ```
-math-learning-app/
+schedule-app/
 ├── .github/workflows/   # Workflows de CI/CD
 ├── backend/             # Backend Spring Boot
 ├── frontend/            # Frontend Vite + React
@@ -67,42 +67,42 @@ math-learning-app/
 
 1. **Clone o Repositório**
 
-   ```sh
-   git clone https://github.com/<org>/math-learning-app.git
-   cd math-learning-app
-   ```
+    ```sh
+    git clone https://github.com/NtwCloud/schedule-app.git
+    cd schedule-app
+    ```
 
 2. **Configure Seu Ambiente**
 
-   - Instale Git, Node.js (para o frontend), Java e Docker(para o backend).
-   - Instale as dependências do projeto:
-     - Frontend: `cd frontend && npm install`
-     - Backend: Veja `/backend/README.md` (ou rode com Maven/IDE).
+    - Instale Git, Node.js (para o frontend), Java e Docker(para o backend).
+    - Instale as dependências do projeto:
+        - Frontend: `cd frontend && npm install`
+        - Backend: Veja `/backend/README.md` (ou rode com Maven/IDE).
 
 3. **Hooks de Pré-commit & Linting**
 
-   - Husky e BiomeJS rodam automaticamente antes de cada commit para assegurar a qualidade do código.
-   - Mensagens de commit são verificadas pelo git-commit-msg-linter.
-   - Se aparecerem erros, rode:
-     ```sh
-     npx biome check
-     ```
+    - Husky e BiomeJS rodam automaticamente antes de cada commit para assegurar a qualidade do código.
+    - Mensagens de commit são verificadas pelo git-commit-msg-linter.
+    - Se aparecerem erros, rode:
+        ```sh
+        npx biome check
+        ```
 
 4. **Branching & PRs**
 
-   - Crie uma nova branch para o seu trabalho:  
-     `git checkout -b feature/nome-da-sua-feature`
-   - Faça push e abra um Pull Request (PR) para revisão.
-   - Todas as mudanças passam por PRs e revisão de código.
+    - Crie uma nova branch para o seu trabalho:  
+      `git checkout -b feature/nome-da-sua-feature`
+    - Faça push e abra um Pull Request (PR) para revisão.
+    - Todas as mudanças passam por PRs e revisão de código.
 
 5. **Revisão de Código**
 
-   - Pelo menos um colega deve revisar e aprovar seu PR.
-   - Corrija qualquer problema apontado pelo CI/CD.
+    - Pelo menos um colega deve revisar e aprovar seu PR.
+    - Corrija qualquer problema apontado pelo CI/CD.
 
 6. **CI/CD**
-   - Workflows rodam automaticamente a cada push/PR.
-   - Só faça merge após todos os checks passarem.
+    - Workflows rodam automaticamente a cada push/PR.
+    - Só faça merge após todos os checks passarem.
 
 ---
 
