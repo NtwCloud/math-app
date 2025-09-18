@@ -5,14 +5,14 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.5.4</version>
+		<version>3.5.6</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.secure</groupId>
-	<artifactId>math</artifactId>
+	<artifactId>schedule</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>math</name>
-	<description>Project math learning app</description>
+	<name>schedule</name>
+	<description>Project schedule app</description>
 	<url/>
 	<licenses>
 		<license/>

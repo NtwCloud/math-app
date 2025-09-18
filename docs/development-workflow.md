@@ -1,6 +1,6 @@
 # Guia de Fluxo de Trabalho para Desenvolvedores
 
-Este documento explica, passo a passo, o fluxo de trabalho para desenvolver no monorepositório do **Math Learning App**. Seguindo estas etapas, você vai evitar erros, reduzir conflitos de merge e garantir uma colaboração tranquila via Pull Requests (PRs).
+Este documento explica, passo a passo, o fluxo de trabalho para desenvolver no monorepositório do **Schedule App**. Seguindo estas etapas, você vai evitar erros, reduzir conflitos de merge e garantir uma colaboração tranquila via Pull Requests (PRs).
 
 ---
 
@@ -9,16 +9,17 @@ Este documento explica, passo a passo, o fluxo de trabalho para desenvolver no m
 ### a. Clone o repositório
 
 ```sh
-git clone https://github.com/<org>/math-learning-app.git
-cd math-learning-app
+git clone https://github.com/NtwCloud/schedule-app.git
+cd schedule-app
 ```
 
 ### b. Certifique-se de que suas dependências estão atualizadas
 
+```sh
 - **Frontend:**
-  ```sh
-  cd frontend && npm install
-  ```
+    ```sh
+    cd frontend && npm install
+    ```
 - **Backend:**  
   Veja as instruções em `/backend/README.md`.
 
@@ -31,7 +32,6 @@ git pull origin main
 
 Rode o comando acima antes de criar uma feature branch para garantir que você está trabalhando com a versão mais recente do código.
 
-
 ---
 
 ## 2. **Criação de Branch**
@@ -39,13 +39,13 @@ Rode o comando acima antes de criar uma feature branch para garantir que você e
 ### a. Sempre crie uma nova branch para o seu trabalho (Milestone)
 
 - Use nomes descritivos para as branches:
-  - `feat/nome-da-feature`
-  - `fix/descricao-do-bug`
-  - `hotfix/correção-urgente`
-  - `chore/atualização-de-dependencias`
-  - `test/adição-de-testes`
-  - `docs/atualização-da-documentação`
-  - `style/atualização-de-estilos`
+    - `feat/nome-da-feature`
+    - `fix/descricao-do-bug`
+    - `hotfix/correção-urgente`
+    - `chore/atualização-de-dependencias`
+    - `test/adição-de-testes`
+    - `docs/atualização-da-documentação`
+    - `style/atualização-de-estilos`
 
 ```sh
 git checkout -b feat/nome-descritivo-da-feature
@@ -64,10 +64,10 @@ git checkout -b feat/nome-descritivo-da-feature
 - Escreva mensagens de commit claras e significativas.
 
 - Rode o biome check e testes antes de fazer commites (ajuda a manter a qualidade do código):
-  ```sh
-  npx biome check
-  npm test
-  ```
+    ```sh
+    npx biome check
+    npm test
+    ```
 
 ### c. Hooks de pré-commit
 
@@ -121,10 +121,10 @@ git push origin feature/nome-da-feature
 
 - Apenas mantenedores devem fazer o merge dos PRs.
 - Após o merge, exclua sua branch de feature:
-  ```sh
-  git branch -d feature/nome-da-feature # Apaga a feature-branch localmente
-  git push origin --delete feature/nome-da-feature # Apaga a feature-branch remotamente no Github
-  ```
+    ```sh
+    git branch -d feature/nome-da-feature # Apaga a feature-branch localmente
+    git push origin --delete feature/nome-da-feature # Apaga a feature-branch remotamente no Github
+    ```
 
 ---
 

@@ -1,4 +1,4 @@
-package com.secure.math;
+package com.secure.schedule;
 
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.GetMapping;

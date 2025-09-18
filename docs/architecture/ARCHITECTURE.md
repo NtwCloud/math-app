@@ -1,13 +1,13 @@
-# Math App - Architecture Documentation
+# Schedule App - Architecture Documentation
 
 ## 1. Project Overview
 
-The Math App is a comprehensive learning platform consisting of three main components: a backend API for data management and authentication, a React-based dashboard for user interaction, and a marketing landing page. The entire system is deployed on AWS using modern containerization and infrastructure-as-code practices.
+The Schedule App is a comprehensive learning platform consisting of three main components: a backend API for data management and authentication, a React-based dashboard for user interaction, and a marketing landing page. The entire system is deployed on AWS using modern containerization and infrastructure-as-code practices.
 
 ## 2. Project Structure
 
 ```
-math-app/
+schedule-app/
 ├── backend/                    # Java Spring Boot 3 API
 │   ├── src/main/java/
 │   ├── src/main/resources/
@@ -33,33 +33,37 @@ math-app/
 ## 3. Technology Stack
 
 ### Backend
+
 - **Framework:** Java Spring Boot 3
 - **Purpose:** REST API for CRUD operations and authentication
 - **Features:**
-  - User authentication and authorization
-  - Data persistence and management
-  - Business logic implementation
-  - Security middleware
+    - User authentication and authorization
+    - Data persistence and management
+    - Business logic implementation
+    - Security middleware
 
 ### Frontend Dashboard
+
 - **Framework:** React with Vite
 - **Purpose:** User interaction and application interface
 - **Features:**
-  - User dashboard
-  - Math learning modules
-  - Progress tracking
-  - Interactive exercises
+    - User dashboard
+    - Schedule modules
+    - Progress tracking
+    - Interactive exercises
 
 ### Landing Page
+
 - **Framework:** React with Vite
 - **Purpose:** Marketing and user acquisition
 - **Features:**
-  - Product presentation
-  - User registration
-  - Marketing content
-  - Call-to-action components
+    - Product presentation
+    - User registration
+    - Marketing content
+    - Call-to-action components
 
 ### Infrastructure
+
 - **Cloud Provider:** AWS
 - **Infrastructure as Code:** Terraform
 - **Containerization:** Docker with ECS
@@ -81,21 +85,23 @@ math-app/
 ### 4.2 Component Interactions
 
 1. **Landing Page → Backend API**
-   - User registration
-   - Initial contact forms
-   - Marketing analytics
+
+    - User registration
+    - Initial contact forms
+    - Marketing analytics
 
 2. **Frontend Dashboard → Backend API**
-   - User authentication
-   - CRUD operations for math content
-   - Progress tracking
-   - User profile management
+
+    - User authentication
+    - CRUD operations for schedule content
+    - Progress tracking
+    - User profile management
 
 3. **Backend API**
-   - Centralized authentication service
-   - Data validation and business logic
-   - Database operations
-   - API endpoints for both frontend applications
+    - Centralized authentication service
+    - Data validation and business logic
+    - Database operations
+    - API endpoints for both frontend applications
 
 ## 5. Deployment Architecture
 
@@ -106,12 +112,14 @@ GitHub Repository → GitHub Actions (CI) → AWS CodeDeploy (CD) → ECS Contai
 ```
 
 **Continuous Integration (GitHub Actions):**
+
 - Code quality checks
 - Unit and integration tests
 - Docker image building
 - Push to Amazon ECR
 
 **Continuous Deployment (AWS CodeDeploy):**
+
 - Deploy to ECS clusters
 - Rolling deployment strategy
 - Health checks and monitoring
@@ -120,23 +128,27 @@ GitHub Repository → GitHub Actions (CI) → AWS CodeDeploy (CD) → ECS Contai
 ### 5.2 AWS Infrastructure
 
 **Container Orchestration:**
+
 - **Amazon ECS:** Container orchestration service
 - **Amazon ECR:** Private container registry
 - **Docker Containers:** Application packaging
 
 **Networking:**
+
 - **VPC (Virtual Private Cloud):** Isolated network environment for production
 - **Subnets:** Public and private subnet configuration
 - **Security Groups:** Network-level security rules
 - **Load Balancers:** Traffic distribution and high availability
 
 **Infrastructure Management:**
+
 - **Terraform:** Infrastructure as Code for reproducible deployments
 - **Version Control:** Infrastructure versioning and change tracking
 
 ## 6. Data Flow
 
 ### 6.1 User Authentication Flow
+
 1. User accesses Landing Page or Frontend Dashboard
 2. Authentication request sent to Backend API
 3. Backend validates credentials and returns JWT token
@@ -144,6 +156,7 @@ GitHub Repository → GitHub Actions (CI) → AWS CodeDeploy (CD) → ECS Contai
 5. Protected routes require valid token verification
 
 ### 6.2 Application Data Flow
+
 1. User interacts with Frontend Dashboard
 2. Frontend sends HTTP requests to Backend API
 3. Backend processes requests and applies business logic
